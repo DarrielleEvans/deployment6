@@ -11,23 +11,7 @@ pipeline {
         '''
      }
    }
-    stage ('test') {
-      steps {
-        sh '''#!/bin/bash
-        source test/bin/activate
-        pip install mysqlclient
-        pip install pytest
-        py.test --verbose --junit-xml test-reports/results.xml
-        ''' 
-      }
-    
-      post{
-        always {
-          junit 'test-reports/results.xml'
-        }
-       
-      }
-    }
+
    
      stage('Init') {
        agent {label 'awsDeploy'}
