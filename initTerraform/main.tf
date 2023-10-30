@@ -61,7 +61,7 @@ resource "aws_instance" "applicationServer01-east" {
   instance_type = var.instance_type
   subnet_id = aws_subnet.publicSubnet01.id
   security_groups = [aws_security_group.sshAcessSG.id]
-  user_data = "${file("userDataScript.sh")}"
+  user_data = "${file("server_setup.sh")}"
   key_name = var.key_name
 
   
@@ -78,7 +78,7 @@ resource "aws_instance" "applicationServer02-east" {
   instance_type = var.instance_type
   subnet_id = aws_subnet.publicSubnet02.id
   security_groups = [aws_security_group.sshAcessSG.id]
-  user_data = "${file("userDataScript.sh")}"
+  user_data = "${file("server_setup.sh")}"
   key_name = var.key_name
 
   tags = {
@@ -211,7 +211,7 @@ resource "aws_instance" "applicationServer01-west" {
   subnet_id = aws_subnet.publicSubnet03.id
   security_groups = [aws_security_group.sshAcessSGWest.id]
   key_name = var.key_name_west
-  user_data = "${file("userDataScript.sh")}"
+  user_data = "${file("server_setup.sh")}"
 
   
   tags = {
@@ -229,7 +229,7 @@ resource "aws_instance" "applicationServer02-west" {
   subnet_id = aws_subnet.publicSubnet04.id
   security_groups = [aws_security_group.sshAcessSGWest.id]
   key_name = var.key_name_west
-  user_data = "${file("userDataScript.sh")}"
+  user_data = "${file("server_setup.sh")}"
 
   tags = {
     "Name" : var.instance_B_name_west
