@@ -1,6 +1,6 @@
 # east variables
-access_key          = #aws access key
-secret_key          = #aws secret key
+access_key          = ""
+secret_key          = ""
 region              = "us-east-1"
 ami                 = "ami-0fc5d935ebf8bc3bc"
 instance_type       = "t2.large"
