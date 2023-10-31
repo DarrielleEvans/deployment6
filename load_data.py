@@ -11,7 +11,7 @@ app = Flask(__name__)
 #Base.metadata.bind = engine
 DATABASE_URL = 'mysql+mysqldb://admin:abcd1234@mydatabase.cczam3a4yemt.us-east-1.rds.amazonaws.com/banking?charset=utf8mb4'
 engine = create_engine(DATABASE_URL, pool_pre_ping=True, echo=True)
-Base.metadata.bind = engine
+Base.metadata.create_all(engine)
 db = scoped_session(sessionmaker(bind=engine))
 bcrypt = Bcrypt(app)
 
