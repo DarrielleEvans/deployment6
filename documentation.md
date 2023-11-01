@@ -42,6 +42,8 @@ Add your credentials to be used as environment variables
 Run a Jenkins Multi-branch build
   
 # System Diagram
+![d6 drawio](https://github.com/DarrielleEvans/deployment6/assets/89504317/e96fa99b-fe99-4d9c-ae2f-f01a4270d45d)
+
 
 # Optimization (How would make this deployment more efficient)
 * I manually installed the following dependencies: 
