@@ -45,6 +45,7 @@ Run a Jenkins Multi-branch build
 
 # Optimization (How would make this deployment more efficient)
 * I manually installed the following dependencies:
+  
   Instance 1:
     - Jenkins, software-properties-common, add-apt-repository -y ppa:deadsnakes/ppa, python3.7, python3.7-venv, build-essential, libmysqlclient-dev,         python3.7-dev
   Instance 2:
