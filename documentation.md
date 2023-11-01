@@ -19,6 +19,8 @@
     - Jenkins, software-properties-common, add-apt-repository -y ppa:deadsnakes/ppa, python3.7, python3.7-venv, build-essential, libmysqlclient-dev,         python3.7-dev
   Instance 2:
     - Terraform and default-jre
+      
 Creating a script to install the dependencies would be an efficient solution as the script is resuable and can be included in the terraform main.tf file.
+With both infrastructures deployed, is there anything else we should add to our infrastructure? We should include a monitoring service like Data Dog within our infrastructure. Maintaining multiple servers can get overwhelming. If we use a monitoring service we can setup alerts that will let us know when our attention is needed to a particular server.
 
  
