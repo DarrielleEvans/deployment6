@@ -13,7 +13,7 @@ The port "3306" was not opened. Once I edited the inbound rules in security. The
 # Steps
 ### Step 1
 * Use Terraform to create two instances to create a Jenkins server and agent architecture.
-  - Install on the Jenkins Server
+   Install on the Jenkins Server
       - Instance 1:
         - Jenkins, software-properties-common, add-apt-repository -y ppa:deadsnakes/ppa, python3.7, python3.7-venv, build-essential, libmysqlclient-              dev, python3.7-dev
   - Install on the Jenkins Agent
@@ -44,11 +44,10 @@ Run a Jenkins Multi-branch build
 # System Diagram
 
 # Optimization (How would make this deployment more efficient)
-* I manually installed the following dependencies:
-  
-  Instance 1:
+* I manually installed the following dependencies: 
+  * Instance 1:
     - Jenkins, software-properties-common, add-apt-repository -y ppa:deadsnakes/ppa, python3.7, python3.7-venv, build-essential, libmysqlclient-dev,         python3.7-dev
-  Instance 2:
+  * Instance 2:
     - Terraform and default-jre
       
 Creating a script to install the dependencies would be an efficient solution as the script is resuable and can be included in the terraform main.tf file.
