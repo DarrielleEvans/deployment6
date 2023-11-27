@@ -1,5 +1,4 @@
-<p align="center">
-<img src="https://github.com/kura-labs-org/kuralabs_deployment_1/blob/main/Kuralogo.png">
+<h1 align="center">Deploy Banking App while storing Data in an Amazon Relational Database Service<h1> 
 </p>
 <h1 align="center">C4_deployment-6<h1> 
 
