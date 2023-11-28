@@ -13,7 +13,7 @@ To address these issues, I have now deployed the application across two differen
   - Identify the technology being utilized.
     
 ## Step 2
-- Use Terraform to create 2 instances to create a Jenkins manager/agent architecture
+- Use Terraform to create a Jenkins manager/agent setup with two instances. This architecture supports scalability by enabling simultaneous testing and building on multiple nodes, avoiding limitations of one-node builds. It also facilitates easy deployment of additional application versions by adding more nodes, ensuring fault tolerance with agents capable of handling tasks even if one is down. 
   - Jenkins Manager:
   - Jenkins Agent:
 ## Step 3
