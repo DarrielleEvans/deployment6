@@ -14,7 +14,13 @@ To address these issues, I have now deployed the application across two differen
   - Identify the technology being utilized.
     
 ## Step 2
-
+- Use Terraform to create 2 instances to create a Jenkins manager/agent architecture
+  - Jenkins Manager:
+  - Jenkins Agent:
+## Step 3
+- Create an infrastructure across two AWS( East and West) regions using Terraform
+- Resources to Deploy
+  -   
 
 
 # Technologies used
