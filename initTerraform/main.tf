@@ -1,8 +1,8 @@
 #configure provider east
 #resource: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/guides/resource-tagging
 provider "aws" {
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
+  access_key = var.access_key
+  secret_key = var.secret_key
   region = var.region
   #profile = "Admin"
 }
@@ -11,8 +11,8 @@ provider "aws" {
 provider "aws" {
   alias      = "west"
   region     = var.region_west
-  secret_key = var.aws_secret_key
-  access_key = var.aws_access_key
+  secret_key = var.secret_key
+  access_key = var.access_key
 }
 
 # configure vpc east
