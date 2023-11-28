@@ -1,6 +1,6 @@
 # east
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
+variable "access_key" {}
+variable "secret_key" {}
 variable "region" {}
 variable "instance_type" {}
 variable "vpc_name" {}
