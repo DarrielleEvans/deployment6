@@ -7,6 +7,15 @@ To address these issues, I have now deployed the application across two differen
 
 # Deployment Steps 
 ## Step 1
+- Plan the deployment
+  - Create a deployment diagram using a professional diagramming tool like Draw.io
+  - Diagram the deployment using a professional diagramming tool such as Draw.io.
+  - Create a GitHub repository and upload source code and related files.
+  - Identify the technology being utilized.
+    
+## Step 2
+
+
 
 # Technologies used
 # Troubleshooting
