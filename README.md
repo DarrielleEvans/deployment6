@@ -19,8 +19,12 @@ To address these issues, I have now deployed the application across two differen
   - Jenkins Agent:
 ## Step 3
 - Create an infrastructure across two AWS( East and West) regions using Terraform
-- Resources to Deploy
-  -   
+- Resources to Deploy in each region
+  - 2 AZ's
+  - 2 Public Subnets
+  - 2 EC2's
+  - 1 Route Table
+  - Security Group Ports: 8000 and 22  
 
 
 # Technologies used
