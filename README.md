@@ -42,6 +42,38 @@ To address these issues, in this deployment I deployed the application across tw
   - Security Group Ports: 8000 and 22  
 ## Build and Test the application using Jenkins build
 - Created a Jenkins file to run the following stages:
+  1. Build Stage:
+    Purpose: Set up the project environment and install dependencies.
+    What Happens:
+    A Python virtual environment is created using Python 3.7.
+    This environment is activated.
+    Pip (Python package manager) is upgraded.
+    Project-specific dependencies listed in requirements.txt are installed.
+  2. Test Stage:
+     Purpose: Run tests to ensure the application works as expected.
+     What Happens:
+     The same Python virtual environment is activated.
+     Additional dependencies for testing (like mysqlclient and pytest) are installed.
+     Tests are run using pytest, and results are saved in an XML file.
+     Post-Actions:
+     Regardless of the test outcome, the test results are published (using the junit command) for review.
+  3. Init Stage:
+     Purpose: Initialize Terraform for infrastructure management.
+     What Happens:
+     The pipeline switches to a specific agent labeled 'awsDeploy'.
+     AWS credentials are securely fetched.
+     In the initTerraform directory, Terraform is initialized to prepare for infrastructure management.
+  4. Plan Stage:
+     Purpose: Create an execution plan for Terraform.
+     What Happens:
+     Still on the 'awsDeploy' agent.
+     AWS credentials are used again.
+     Terraform generates an execution plan (plan.tfplan) in the initTerraform directory, showing what it will do when the plan is applied.
+  5. Apply Stage:
+     Purpose: Apply the Terraform plan to make infrastructure changes.
+     What Happens:
+     Continuing on the 'awsDeploy' agent.
+     After retrieving AWS credentials, the Terraform plan created in the previous stage is applied, executing the changes to the               infrastructure as defined in the plan.
 
 
 # Troubleshooting
