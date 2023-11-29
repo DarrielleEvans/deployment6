@@ -29,7 +29,9 @@ To address these issues, in this deployment I deployed the application across tw
     
 ## Step 4
 - I've established an AWS RDS Database that seamlessly connects with our applications deployed across both Eastern and Western regions. The implementation of this relational database enhances our users' experience by guaranteeing data consisteny and integrity. It provides a centralized data management system, ensuring a single, consistent version of data across all platforms.
-  - A key step in this process involved opening port 3306 enabling uninterrupted traffic flow to and from the database. 
+  - A key step in this process involved opening port 3306 enabling uninterrupted traffic flow to and from the database.
+  <img width="257" alt="Screen Shot 2023-11-29 at 5 18 46 PM" src="https://github.com/DarrielleEvans/deployment6/assets/89504317/6e24debd-a560-4a8c-8f9b-0e1608e4011a">
+
   
 ## Step 3
 - Create a main.tf file to spin up an infrastructure across two AWS( East and West) regions and automate the application deployments using Terraform.
