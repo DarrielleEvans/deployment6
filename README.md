@@ -74,7 +74,7 @@ To address these issues, in this deployment I deployed the application across tw
      What Happens:
      Continuing on the 'awsDeploy' agent.
      After retrieving AWS credentials, the Terraform plan created in the previous stage is applied, executing the changes to the               infrastructure as defined in the plan.
-
+     <img width="1056" alt="Screen Shot 2023-11-29 at 5 05 14 PM" src="https://github.com/DarrielleEvans/deployment6/assets/89504317/36320d96-b8c0-468b-84cf-69edb97a3704">
 
 # Troubleshooting
 During the Jenkins build process, I encountered an error highlighting the absence of an agent with the 'awsDeploy' label. This error was a clear indicator that the Jenkins pipeline requires specific configurations to run successfully. To resolve this, I set up a new agent node and assigned it the 'awsDeploy' label. Following this adjustment, the pipeline executed smoothly and without any further issues.
