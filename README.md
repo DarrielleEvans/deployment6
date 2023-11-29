@@ -15,13 +15,13 @@ To address these issues, I have now deployed the application across two differen
 ## Step 2
 - Use Terraform to create a Jenkins manager/agent setup with two instances. The Jenkins agent has terraform installed. Instead of deploying the applications on a Jenkins agent, I am automating the deployment using Terraform and including a user-data-script that contains the commands to deploy the application. Using Terraform scripts to automate the deployment speeds up the deployment process by reducing manual effort, reduces human error and promotes consistency as the templates can be reused when scaling our system, and can also save money in the long run being that resources can be quickly terminated.  
   - Jenkins Manager: Install the following dependencies
-   - software-properties-common: This package provides necessary tools to manage the software repositories that your system uses, making       it easier to install and update software.
-   - add-apt-repository -y ppa:deadsnakes/ppa: This command adds the Deadsnakes PPA to your system, which is a repository containing           newer releases of Python not provided by the default Ubuntu repositories.
-   - python3.7: Installs Python 3.7, a specific version of Python, ensuring compatibility and consistency for your Python-based                applications or scripts.
-   - python3.7-venv: This package provides the Python 3.7 virtual environment tool, allowing you to create isolated Python environments        for different projects or dependencies.
-   - build-essential: A meta-package that installs the GNU compiler collection and related tools, essential for compiling and building         software from source code.
-   - libmysqlclient-dev: This library is necessary for building Python modules that interact with MySQL databases, enabling database           connectivity and operations.
-   - python3.7-dev: Includes development tools and header files for Python 3.7, needed for building Python extensions or compiling Python      packages that include native code
+     - software-properties-common: This package provides necessary tools to manage the software repositories that your system uses,              making it easier to install and update software.
+     - add-apt-repository -y ppa:deadsnakes/ppa: This command adds the Deadsnakes PPA to your system, which is a repository containing           newer releases of Python not provided by the default Ubuntu repositories.
+     - python3.7: Installs Python 3.7, a specific version of Python, ensuring compatibility and consistency for your Python-based                applications or scripts.
+     - python3.7-venv: This package provides the Python 3.7 virtual environment tool, allowing you to create isolated Python environments        for different projects or dependencies.
+     - build-essential: A meta-package that installs the GNU compiler collection and related tools, essential for compiling and building         software from source code.
+     - libmysqlclient-dev: This library is necessary for building Python modules that interact with MySQL databases, enabling database           connectivity and operations.
+     - python3.7-dev: Includes development tools and header files for Python 3.7, needed for building Python extensions or compiling             Python packages that include native code
 
   - Jenkins Agent: Install the following dependencies
     - Terraform
