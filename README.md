@@ -84,3 +84,8 @@ During the Jenkins build process, I encountered an error highlighting the absenc
 # Application Deployed
 # System Diagram
 # Optimization 
+## Fault Tolerant
+While provisioning RDS with our banking application effectively ensures data consistency and integrity, it alone does not provide fault tolerance in our system. Relying on a single database instance poses a risk; in the event of a failure, access to customer banking information could be compromised. To mitigate this, I can implement a backup database. Thanks to RDS's scalability features, I can easily set up and manage this secondary database. This approach guarantees that we always have a reliable, up-to-date backup, ensuring uninterrupted service to our customers even during unforeseen disruptions.
+
+## Monitoring Service
+We should include a monitoring service like Data Dog within our infrastructure. Maintaining multiple servers can get overwhelming. If we use a monitoring service we can setup alerts that will let us know when our attention is needed to a particular server.
