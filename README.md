@@ -40,8 +40,9 @@ To address these issues, I have now deployed the application across two differen
   - 1 Route Table
   - Security Group Ports: 8000 and 22  
 ## Build and Test the application using Jenkins build
+- Created a Jenkins file to run the following stages:
 
-# Technologies used
+
 # Troubleshooting
 # Application Deployed
 # System Diagram
