@@ -40,7 +40,7 @@ To address these issues, in this deployment I deployed the application across tw
   - Install the following dependencies using a user data script on each instance  
   - 1 Route Table
   - Security Group Ports: 8000 and 22  
-## Build and Test the application using Jenkins build
+## Build and Test the application using Jenkins 
 - Created a Jenkins file to run the following stages:
   1. Build Stage:
     Purpose: Set up the project environment and install dependencies.
