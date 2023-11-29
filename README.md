@@ -1,9 +1,9 @@
 <h1 align="center">BankApp Deployment: Terraform, Jenkins, & Amazon RDS<h1> 
 
 # Purpose 
-In the previous deployment, I deployed multiple versions of the banking application, with each version hosted in distinct subnets to minimize downtime risks. However, a significant drawback of this approach was that each application version operated with its own separate database. This architectural choice presented challenges, especially when considering the user experience across different availability zones. Customers accessing the application from various locations could encounter unsynchronized sessions, leading to inconsistencies and a poor user experience.
+In the previous deployment, I deployed multiple versions of the banking application, with each version hosted in distinct subnets to minimize downtime risks. However, a significant drawback of this approach was that each application version operated with its own separate database. This architectural choice presented challenges, especially when considering the user experience across different availability zones. Customers accessing the application from various locations could encounter unsynchronized sessions, leading to inconsistencies and a poor user experience. 
 
-To address these issues, I have now deployed the application across two different regions, aiming to significantly reduce latency and enhance overall accessibility. More importantly, I have integrated a unified Amazon Relational Database Service (RDS) that connects with the application in each region. This modification ensures data synchronization across all sessions, regardless of the user's location. By implementing this change, we achieve data redundancy and maintain a consistent, seamless user experience.
+To address these issues, in this deployment I deployed the application across two different regions, aiming to significantly reduce latency and enhance overall accessibility. More importantly, I have integrated a unified Amazon Relational Database Service (RDS) that connects with the application in each region. This modification ensures data synchronization across all sessions, regardless of the user's location. I also improved the deployment process by using Jenkins and Terraform to automate the deployment process. The benefits of this improvement is that Terraform reduces the amount of manual effort using SSh requires such as managing keys and keeping track of resources. Using Terraform and Jenkins is good for error handling, state management, reusability and collaboration. By implementing this change, we achieve data redundancy and maintain a consistent, seamless user experience.
 
 # Deployment Steps 
 ## Step 1
@@ -28,7 +28,8 @@ To address these issues, I have now deployed the application across two differen
     - Default-Jre
     
 ## Step 4
-- Created an AWS RDS Database that connects to the deployed applications across both(East and West) regions.
+- I've established an AWS RDS Database that seamlessly connects with our applications deployed across both Eastern and Western regions. The implementation of this relational database enhances our users' experience by guaranteeing data consisteny and integrity. It provides a centralized data management system, ensuring a single, consistent version of data across all platforms.
+  - A key step in this process involved opening port 3306 enabling uninterrupted traffic flow to and from the database. 
   
 ## Step 3
 - Create a main.tf file to spin up an infrastructure across two AWS( East and West) regions and automate the application deployments using Terraform.
