@@ -13,9 +13,9 @@ To address these issues, I have now deployed the application across two differen
   - Identify the technology being utilized.
     
 ## Step 2
-- Use Terraform to create a Jenkins manager/agent setup with two instances. This architecture supports scalability by enabling simultaneous testing and building on multiple nodes, avoiding limitations of one-node builds. It also facilitates easy deployment of additional application versions by adding more nodes, ensuring fault tolerance with agents capable of handling tasks even if one is down. 
+- Use Terraform to create a Jenkins manager/agent setup with two instances. The Jenkins agent has terraform installed. Instead of deploying the applications on a Jenkins agent, I am automating the deployment using Terraform and including a user-data-script that contains the commands to deploy the application. Using Terraform scripts to automate the deployment speeds up the deployment process by reducing manual effort, reduces human error and promotes consistency as the templates can be reused when scaling our system, and can also save money in the long run being that resources can be quickly terminated.  
   - Jenkins Manager: Install the following dependencies
-    - Jenkins
+    - Jenkins: 
     - software-properties-common
     - add-apt-repository -y ppa:deadsnakes/ppa
     - python3.7
@@ -33,7 +33,7 @@ To address these issues, I have now deployed the application across two differen
   - 2 AZ's
   - 2 Public Subnets
   - 2 EC2's
-    - Install the following dependencies using a user data script on each instance  
+  - Install the following dependencies using a user data script on each instance  
   - 1 Route Table
   - Security Group Ports: 8000 and 22  
 
