@@ -78,7 +78,7 @@ To address these issues, in this deployment I deployed the application across tw
 
 # Troubleshooting
 During the Jenkins build process, I encountered an error highlighting the absence of an agent with the 'awsDeploy' label. This error was a clear indicator that the Jenkins pipeline requires specific configurations to run successfully. To resolve this, I set up a new agent node and assigned it the 'awsDeploy' label. Following this adjustment, the pipeline executed smoothly and without any further issues.
-screenshots/agentError.jpeg
+[screenshots/agentError.jpeg](https://github.com/DarrielleEvans/deployment6/blob/d26abb5bf4d825582b79dc91ed76f02a3397d3b5/screenshots/agentError.jpeg)https://github.com/DarrielleEvans/deployment6/blob/d26abb5bf4d825582b79dc91ed76f02a3397d3b5/screenshots/agentError.jpeg
 # Application Deployed
 # System Diagram
 # Optimization 
