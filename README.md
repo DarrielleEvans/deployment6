@@ -26,8 +26,12 @@ To address these issues, I have now deployed the application across two differen
   - Jenkins Agent: Install the following dependencies
     - Terraform
     - Default-Jre
+    
+## Step 4
+- Created an AWS RDS Database that connects to the deployed applications across both(East and West) regions.
+  
 ## Step 3
-- Create an infrastructure across two AWS( East and West) regions using Terraform
+- Create a main.tf file to spin up an infrastructure across two AWS( East and West) regions and automate the application deployments using Terraform.
 - Resources to Deploy in each region
   - 2 AZ's
   - 2 Public Subnets
@@ -35,7 +39,7 @@ To address these issues, I have now deployed the application across two differen
   - Install the following dependencies using a user data script on each instance  
   - 1 Route Table
   - Security Group Ports: 8000 and 22  
-
+## Build and Test the application using Jenkins build
 
 # Technologies used
 # Troubleshooting
