@@ -14,8 +14,19 @@ To address these issues, I have now deployed the application across two differen
     
 ## Step 2
 - Use Terraform to create a Jenkins manager/agent setup with two instances. This architecture supports scalability by enabling simultaneous testing and building on multiple nodes, avoiding limitations of one-node builds. It also facilitates easy deployment of additional application versions by adding more nodes, ensuring fault tolerance with agents capable of handling tasks even if one is down. 
-  - Jenkins Manager:
-  - Jenkins Agent:
+  - Jenkins Manager: Install the following dependencies
+    - Jenkins
+    - software-properties-common
+    - add-apt-repository -y ppa:deadsnakes/ppa
+    - python3.7
+    - python3.7-venv
+    - build-essential
+    - libmysqlclient-dev
+    - python3.7-dev
+
+  - Jenkins Agent: Install the following dependencies
+    - Terraform
+    - Default-Jre
 ## Step 3
 - Create an infrastructure across two AWS( East and West) regions using Terraform
 - Resources to Deploy in each region
