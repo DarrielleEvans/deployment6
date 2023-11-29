@@ -24,8 +24,8 @@ To address these issues, in this deployment I deployed the application across tw
      - python3.7-dev: Includes development tools and header files for Python 3.7, needed for building Python extensions or compiling             Python packages that include native code
 
   - Jenkins Agent: Install the following dependencies
-    - Terraform
-    - Default-Jre
+    - Terraform: An Infrastructure as Code tool used for building, changing, and versioning infrastructure safely and efficiently across        various cloud providers
+    - Default-Jre: This is essential for running Java applications, providing the necessary runtime libraries and components.
     
 ## Step 4
 - I've established an AWS RDS Database that seamlessly connects with our applications deployed across both Eastern and Western regions. The implementation of this relational database enhances our users' experience by guaranteeing data consisteny and integrity. It provides a centralized data management system, ensuring a single, consistent version of data across all platforms.
